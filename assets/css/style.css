@@ -1,0 +1,247 @@
+/*initialisation du css*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.none {
+    display: none;
+  }
+  
+  .flex {
+    display: flex;
+  }
+/*la page dans son entièreté*/
+main {
+  display: flex;
+  height: 100vh;
+}
+/*barre de sélection*/
+.fruitBox {
+  height: 100vh;
+  background-color: rgb(233, 206, 206);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.fruitBox > ul > li {
+    font-size: 30px;
+    text-decoration: none;
+    padding: 20px 10px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fruitBox > ul > li:hover {
+    background-color: rgb(222, 226, 222);
+    color: rgb(68, 67, 67);
+    cursor: pointer;
+  }
+  
+  .fruitBox > ul > li > img {
+    width: 40px;
+    margin-left: 20px;
+  }
+/*l'article*/ 
+#mainArticle {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto ;
+}
+
+h2 {
+  padding: 20px 10px;
+}
+
+.fruitCard {
+  max-width:960px;
+  max-height:480px;
+  display: flex;
+  position: relative;
+  visibility: visible;
+  transition: 2s;
+}
+
+.fruitCard > p {
+  width: 400px;
+}
+/*disparition de l'article*/
+.fruitCardHidden{
+    visibility: hidden;
+    transition: 2s;
+}
+/*liens des background image*/
+.bananaPic {
+  background-image: url("../img/bananaPic.png");
+}
+
+.strawberryPic {
+  background-image: url("../img/strawberryPic.png");
+}
+
+.raspberryPic {
+  background-image: url("../img/raspberry.png");
+}
+
+.kiwiPic {
+  background-image: url("../img/kiwi.jpg");
+}
+
+.orangePic {
+  background-image: url("../img/orangePic.png");
+}
+/*attributs des background image*/
+.fruitPic {
+  width: 480px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/*croix de cloture*/
+.fruitCard > #stickTop {
+  width: 30px;
+  height: 6px;
+  background-color: black;
+  border-radius: 3px;
+  margin: 3px;
+}
+
+.fruitCard #stickBottom {
+    width: 30px;
+    height: 6px;
+    background-color: black;
+    border-radius: 3px;
+    margin: 3px;
+  }
+
+#stickTop {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#stickBottom {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 14px;
+  right:10px;
+  cursor: pointer;
+}
+/*attributs du texte de l'article*/
+#fruitText {
+  width: 480px;
+  height: 400px;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+#fruitCarac {
+  padding: 15px 10px;
+}
+/*couleurs de fond du texte*/
+.colorStraw{
+    background-color:rgb(247, 131, 131);
+}
+
+.colorBanana{
+    background-color:rgb(239, 247, 131);
+}
+
+.colorRasp{
+    background-color:rgb(247, 131, 228);
+}
+
+.colorKiwi{
+    background-color:rgb(131, 247, 156);
+}
+
+.colorOrange{
+    background-color:rgb(247, 210, 131);
+}
+/*points de rupture */
+@media screen and (max-width: 1220px) {
+  .fruitPic {
+    width: 250px;
+    height: 250px;
+    margin: auto 10px auto 30px;
+  }
+}
+/*point de rupture tablette*/
+@media screen and (max-width: 980px) {
+  li > span {
+    display: none;
+  }
+  .fruitBox > h2 {
+    display: none;
+  }
+  .fruitBox > ul > li {
+    padding: 3px;
+    border-radius: 50%;
+  }
+  .fruitBox > ul > li > img {
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+  }
+  .fruitBox {
+    background-color: transparent;
+  }
+  .fruitBox > ul {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 25px;
+  }
+  .fruitCard {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: none;
+      }
+    #mainArticle{
+        height: 800px;
+    }
+    #stickBottom{
+        top:206px;
+    }
+    #stickTop{
+        top:206px;
+    }
+}
+/*point de rupture mini tablette et smartphone*/
+@media screen and (max-width: 620px) {
+    #fruitText{
+        width:250px;
+        margin-bottom:20px;
+    }
+
+    .fruitBox{
+        position:fixed;
+        left:0;
+    }
+
+    .fruitCard{
+        margin-left: 94px;
+    }
+    #stickBottom{
+        right:25px;
+    }
+    #stickTop{
+        right:25px;
+    }
+}

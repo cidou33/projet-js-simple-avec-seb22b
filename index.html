@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="site de vente de produits primeurs, venez visiter notre sélection de fruits: Banane, fraise, orange, framboise et kiwi." />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/kiwiPic.png">
+    <title>produits de chez mon primeur préféré</title>
+  </head>
+  <body>
+    <main>
+      <!--barre latérale de sélection de produits-->
+      <section class="fruitBox">
+        <h2>Notre sélection :</h2>
+        <ul>
+          <li id="strawberryBtn">
+         <span>Fraise</span><img src="assets/img/strawberryIcon.png" alt="photo de fraises" />
+          </li>
+          <li id="bananaBtn">
+            <span>Banane</span><img src="assets/img/bananaIcon.png" alt="photo de bananes" />
+          </li>
+          <li id="kiwiBtn">
+            <span>Kiwi</span><img src="assets/img/kiwiIcon.png" alt="photo de kiwi" />
+          </li>
+          <li id="raspberryBtn">
+            <span>Framboise</span><img src="assets/img/raspberryIcon.png" alt="photo de framboises" />
+          </li>
+          <li id="orangeBtn">
+            <span>Orange</span><img src="assets/img/orangeIcon.png" alt="photo d'orange" />
+          </li>
+        </ul>
+      </section>
+      <!--structure de la card qui se remplira grace au js-->
+      <div id="mainArticle" class="none">
+        <article class="fruitCard">
+          <!--croix de fermeture de l'article-->
+            <div id="stickTop"></div>
+            <div id="stickBottom"></div>
+            <!--image du produit-->
+          <div id="imgFruit" class="fruitPic">
+          </div>
+          <!--texte de l'article-->
+          <div id="fruitText">
+            <h2 id="fruitName"></h2>
+            <p id="fruitDescription"></p>
+            <h3 id="fruitCarac"></h3>
+            <span id="caracOne"></span>
+            <span id="caracTwo"></span>
+            <span id="caracThree"></span>
+            <span id="caracFour"></span>
+            <span id="caracFive"></span>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
