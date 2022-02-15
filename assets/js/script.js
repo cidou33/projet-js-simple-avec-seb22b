@@ -46,8 +46,8 @@ function colorOrange(){
 }
 //déclaration des fonctions faisant apparaitre les cards 
 function addBananaCard(){
-    card.classList.remove("none","fruiCardHidden");
-    card.classList.add("flex", "fruitCard");
+    card.className = '';
+    card.classList.add("flex");
     picture.className = '';
     picture.classList.add("bananaPic");
     picture.classList.add("fruitPic");
@@ -62,7 +62,7 @@ function addBananaCard(){
 };
 
 function addStrawberryCard(){
-    card.classList.remove("none");
+    card.className = '';
     card.classList.add("flex");
     picture.className = '';
     picture.classList.add("strawberryPic");
@@ -78,7 +78,7 @@ function addStrawberryCard(){
 };
 
 function addRaspberryCard(){
-    card.classList.remove("none");
+    card.className = '';
     card.classList.add("flex");
     picture.className = '';
     picture.classList.add("raspberryPic");
@@ -94,7 +94,7 @@ function addRaspberryCard(){
 };
 
 function addKiwiCard(){
-    card.classList.remove("none");
+    card.className = '';
     card.classList.add("flex");
     picture.className = '';
     picture.classList.add("kiwiPic");
@@ -110,7 +110,7 @@ function addKiwiCard(){
 };
 
 function addOrangeCard(){
-    card.classList.remove("none");
+    card.className = '';
     card.classList.add("flex");
     picture.className = '';
     picture.classList.add("orangePic");
@@ -126,7 +126,7 @@ function addOrangeCard(){
 };
 //fonction de fermeture des cards
 function removeCard(){
-    card.classList.remove("flex");
+    card.className = '';
     card.classList.add("none");
 };
 //appel a l'écoute de différents événements
